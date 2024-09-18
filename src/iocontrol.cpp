@@ -729,7 +729,7 @@ int iocontrol::_fillData(int& i)
 		_boardVars[i].v_type = is_float;
 		jsonError = _parseJson(_boardVars[i]._float, s, value, _boardVars[i]._prec);
 	}
-	else if (type == F("string")) {
+	else if (type == F("string") && !_boardVars[i]._pending) {
 
 		_boardVars[i].v_type = is_string;
 		String tmp = "";
