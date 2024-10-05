@@ -10,6 +10,7 @@
 #define PRINT(A) do_nothing(A)
 int do_nothing(int) { return 0; }
 #endif
+#endif
 
 //tabstop=8
 //#define __DEBUG__
