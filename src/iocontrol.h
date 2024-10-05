@@ -61,6 +61,11 @@ class iocontrol{
 		void enableDebug();
 		void disableDebug();
 #endif
+
+#ifdef RP2040
+		void enableDebug();
+		void disableDebug();
+#endif
 		//vars
 		//no public vars. Not yet...
 
@@ -130,6 +135,9 @@ class iocontrol{
 		bool _debug_flag = false;
 #endif
 
+#ifdef RP2040
+		bool _debug_flag = false;
+#endif
 		//Obj
 		Client& _client;
 };
