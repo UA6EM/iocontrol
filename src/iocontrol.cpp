@@ -4,6 +4,9 @@
 #ifdef ESP32
 #define PRINT(A) _debug_flag ? Serial.println(status2str(A)) : 0
 #else
+#ifdef RP2040
+#define PRINT(A) _debug_flag ? Serial.println(status2str(A)) : 0
+#else
 #define PRINT(A) do_nothing(A)
 int do_nothing(int) { return 0; }
 #endif
